@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<link href="{{url_for('static',filename='css/products.css') }}" rel="stylesheet">
+    <main role="main">
+  <style type="text/css">
+    .product_icons{width: 30%; border: 0px solid;}
+#service h4{font-size: 20px; margin-top: 10px; margin-bottom:10%;}
+#service .service_col{
+  border: 0px solid; 
+}
+#service .product_icons{margin-top: 15px;}
+#service .service-item {border: 0px dotted red; margin:5%}
+#service .service-item:hover{
+  background-color: ; 
+  border:2px solid orange;
+  border-radius:10px;
+  box-shadow: 0 0 10px 0 yellow;
+
+  </style>
+<!-- Welcome Section -->
+  <div class="container-flude" id="Welcome_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="welcome_Quits">
+            <h1>What We<span color="red"> Do?</span></h1>
+            <h3>There are showing list of products, where we work well.</h3>
+          </div><!-- end of Welcome_quits -->         
+ <!-- search box -->
+            <div class="form-wrapper" id="search-Div">
+                
+                
+              </div>              
+            </div><!-- search box -->
+        </div><!-- end OF col-->
+      </div><!-- end OF row-->
+    </div><!-- End Of Container-->
+  </div><!-- ENd Of Container-flude-->
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+<!---->
+
+    <section id="service" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">          
+          <div class="col-md-12 text-center">
+              {{product.name}}
+             <h1 class="service-title pad-bt15"></h1>
+            <hr class="bottom-line">
+          </div>
+
+  {% for item in product %}
+    {% set img = 'images/product_img/' + item.image %}
+
+          <div class="col-md-3 col-sm-6 col-xs-12 service_col">
+            <a href="/sub_subproducts/{{item.name}}">
+              <div class="service-item text-center">
+                <img src="{{url_for('static',filename=img) }}" class="img-responsive product_icons" style=" width: 90%;">
+                <h4 class="">{{item.name}}</h4>                
+              </div>
+            </a>
+          </div>         
+{% endfor %}
+      </div>
+    </section>    
+{% endblock %}
+      
+
+

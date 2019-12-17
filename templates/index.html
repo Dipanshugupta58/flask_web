@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+<!-- Custom styles for this template -->
+<link href="{{url_for('static',filename='css/carousel.css') }}" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/index.css') }}" rel="stylesheet">
+
+   <main role="main">
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="{{url_for('static',filename='images/slide_bg1.jpg') }}">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>CCTV CAMERAS</h1>
+                <p>INTEGRATED SOLUTION FOR SECURITY & SURVEILLANCE</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="{{url_for('static',filename='images/slide_bg3.jpg') }} " alt="Second slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>ENTRANCE SECURITY SOLUTION</h1>
+                <p>REASSURING SECURITY OF YOUR PREMISES</p>                
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="{{url_for('static',filename='images/slide_bg2.jpg') }}" alt="Third slide">
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Homesecure</h1>
+                <p>SMART INTELLIGENT INTEGRATED SECURITY PRODUCTS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+  <section id="service" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12" id="service_heading">
+            <h1 class="text-center">Services</h1>
+            <hr width="50%">
+          </div>
+  {% for item in product %}
+  {% set img = 'images/icons/' + item.image %}
+          <div class="col-md-3 col-sm-6 col-xs-12 service_col">
+            <a href="/sub_products/{{item.category}}">
+            <div class="service-item text-center">
+              <img src="{{url_for('static',filename=img) }}" class="img-responsive product_icons">
+            <h4>{{item.category}}</h4>
+            </div>
+          </a>
+          </div>  
+  {% endfor %}
+      </div>
+    </div>
+  </section>
+
+<div class="container-flude bg-light">
+  <div class="container" >
+    <div class="row featurette">
+      <div class="col-md-12 text-center" id="recentlywork_heading">
+        <h2>Our Recently Work </h2>
+        <hr width="50%">       
+
+<!--Displaying Data Using For Loop -->
+
+
+{% for item in client %} 
+{% set img = 'images/Client_Images/' + item.img %}
+{%if item.sn % 2 != 0%}
+<div class="container-flude bg-light" >
+  <div class="container" id="recently_work" >
+    <div class="row" id="recentlywork_heading">
+      <div class="col-md-7 text-left">
+            <h2 class="featurette-heading ">{{item.name}}</h2>
+             <p class="lead">{{item.feedback}}</p>
+            <table width="100%">
+              <tr>
+                  <td><p class="lead">{{item.location}}</p></td>
+                  <td align="right"><p class="lead">{{item.date}}</p></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-5">
+            <center>
+              <img class="featurette-image img-fluid mx-auto solution_icon" src="{{url_for('static',filename=img) }}">
+            </center>
+        </div>
+        </div>          
+            <hr class="featurette-divider">
+        </div>  
+    </div>
+  </div>
+</div>
+{% else %}
+  <div class="container-flude bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 order-md-2" id='cl_data'>
+                <h2 class="featurette-heading">{{item.name}}</h2>
+                <p class="lead">{{item.feedback}}</p>
+                <table width="100%">
+                  <tr>
+                    <td><p class="lead">{{item.location}}</p></td>
+                    <td align="right"><p class="lead">{{item.date}}</p></td>
+                  </tr>
+                </table>
+              </div>
+            <div class="col-md-5 order-md-1">
+              <center>
+                  <img class="featurette-image img-fluid mx-auto solution_icon" src="{{url_for('static',filename=img) }}">
+              </center>
+            </div>
+          </div>
+            <hr class="featurette-divider">
+      </div>
+    </div>    
+  </div>
+{% endif %}
+{% endfor %}
+      </div>
+    </div>
+  </div>
+</div> 
+{% endblock %}
+

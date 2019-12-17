@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block body %}
+<style type="text/css">
+  .solution_icon{width: 55%}
+
+ /* WelcomeSection */
+
+ #Welcome_section{
+  border: 0px solid;  
+  background-image:  url();
+   background: url('../static/images/SOLUTION_BANNER.jpg') no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+    margin-bottom:0;
+    height: 300px;
+    margin-top: 87px;
+    color: black;
+
+</style>
+
+
+  <div class="container-flude" id="Welcome_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          
+        </div><!-- end OF col-->
+      </div><!-- end OF row-->
+    </div><!-- End Of Container-->
+  </div><!-- ENd Of Container-flude-->  
+
+<div class="container-flude " style="margin-top: 3%;">
+  <div class="container">
+    <div class="row featurette">      
+          <div class="col-md-7">
+            <h2 class="featurette-heading">BANKING.</h2>
+            <p class="">Money, finance and security businesses are vulnerable to constant threats. Secureye understands the unique needs of these industries and offer reliable solutions that you can bank on. With Secureye – Smart Integrated Solution for Banking & Finance, you can boast your powerful and integrated functionalities.</p>
+
+            <p class="">Secureye Solution helps you to integrate multiple functionalities at single platform. From security to asset monitoring and from customer’s authentication to employee verification methodology, we have a powerful solution which provides answer to all your security related issues.</p>
+          </div>
+          <div class="col-md-5">
+            <center>
+            <img class="featurette-image img-fluid mx-auto solution_icon" src="{{url_for('static',filename='images/Banking.png') }}">
+            </center>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">EDUCATION</h2>
+            <p class="">With huge number of students, the safety and security of students is the sole responsibility of Education Institution Authority. Secureye provides complete range of security and surveillance solution for making every educational institution, a safer place for students.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <center>
+            <img class="featurette-image img-fluid mx-auto solution_icon" src="{{url_for('static',filename='images/Education.png') }}">
+          </center>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">CORPORATE</h2>
+            <p class="">To make a safer work place for employer and employees is the main motive of Secureye. We offer a complete solution for Corporate which includes Attendance Management of Employees, Access Control and Video Surveillance.</p>
+          </div>
+          <div class="col-md-5">
+            <center>
+            <img class="featurette-image img-fluid mx-auto solution_icon"  src="{{url_for('static',filename='images/Coperate.png') }}">
+          </center>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">HOSPITALITY / HEALTH CARE</h2>
+            <p class="">One of the most important industry segments is Hospitality or health care which needs strict security and surveillance solutions. It can easily become safe haven for terrorists or refugees during any natural disaster or unwanted events. Secureye provides complete solution ranging from video surveillance to door access control and entrance security. Biometric attendance system of staff is also considered while implementation of solutions from Secureye.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <center>
+            <img class="featurette-image img-fluid mx-auto solution_icon" src="{{url_for('static',filename='images/Hospital.png') }}">
+          </center>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">RESIDENTIAL</h2>
+            <p class="">With emergence of security threats these days, residential apartments are the most vulnerable areas of burglary or theft. To avoid all these issues, Secureye have a complete solution which can easily enhance and assure the security and safety of residential area.</p>
+          </div>
+          <div class="col-md-5">
+            <center>
+            <img class="featurette-image img-fluid mx-auto solution_icon" src="{{url_for('static',filename='images/Home.png') }}">
+          </center>
+          </div>
+        </div>        
+  </div>  
+  <hr class="featurette-divider">
+</div>
+{% endblock %}

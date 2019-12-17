@@ -1,0 +1,56 @@
+.product_icons{width: 30%; border: 0px solid;}
+#service h4{font-size: 20px; margin-top: 10px; margin-bottom:10%;}
+#service .service_col{
+  border: 0px solid; 
+}
+#service .product_icons{margin-top: 15px;}
+#service .service-item {border: 0px dotted red; margin:5%}
+#service .service-item:hover{
+  background-color: ; 
+  border:2px solid orange;
+  border-radius:10px;
+  box-shadow: 0 0 10px 0 yellow;
+}
+#recentlywork_heading h2{
+  font-size: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%
+}
+#service a{text-decoration: none;}
+.solution_icon{width: 55%}
+#cl_data
+{
+  /*border: 1px solid black;/
+  width: 4em;*/
+}
+#cl_data h2
+{
+  margin-top: 5%;
+}
+.featurette-image
+{
+  /*border: 3px solid black;*/
+  width: 25em;
+  box-shadow: 5px 5px #ff9800;
+    
+}
+#footer
+{
+  /*border: 2px solid black;*/
+}
+#footer .float-right
+{
+  margin-right: 5%;
+}
+#footer p
+{
+  margin-left: 5%;
+}
+.featurette-image:hover
+{
+  /*border: 3px solid black;*/
+  width: 27em;
+  
+    
+}
+

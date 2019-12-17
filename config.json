@@ -1,0 +1,13 @@
+{
+  "params":
+  {
+    "local_sever":"True",
+    "local_uri":"mysql+pymysql://root:@localhost/homesecure",
+    "production_uri":"mysql+pymysql://root:@localhost/homesecure",
+    "blog_name":"Homesecure.com",
+    "home_numbers_of_post":1,
+    "file_location":"C:\\Users\\bUNNY\\PycharmProjects\\karwi\\static\\images\\Client_Images\\",
+    "admin_user":"admin",
+    "asmin_password":"admin"
+  }
+}

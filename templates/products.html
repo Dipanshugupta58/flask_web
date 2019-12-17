@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <link href="{{url_for('static',filename='css/products.css') }}" rel="stylesheet">
+  
+    <main role="main">
+<!-- Welcome Section -->
+  <div class="container-flude" id="Welcome_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <div id="welcome_Quits">
+            <h1>What We<span color="red"> Do?</span></h1>
+            <h3>There are showing list of products, where we work well.</h3>
+          </div><!-- end of Welcome_quits -->         
+ <!-- search box -->
+        </div><!-- end OF col-->
+      </div><!-- end OF row-->
+    </div><!-- End Of Container-->
+  </div><!-- ENd Of Container-flude-->
+  
+
+  <section id="service" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12" id="service_heading">
+            <h1 class="text-center">Services</h1>
+            <hr width="50%">
+          </div>
+  {% for item in product %}
+  {% set img = 'images/icons/' + item.image %}
+          <div class="col-md-3 col-sm-6 col-xs-12 service_col">
+            <a href="/sub_products/{{item.category}}">
+            <div class="service-item text-center">
+              <img src="{{url_for('static',filename=img) }}" class="img-responsive product_icons">
+            <h4>{{item.category}}</h4>
+            </div>
+          </a>
+          </div>  
+  {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
+

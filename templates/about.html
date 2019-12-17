@@ -1,0 +1,69 @@
+﻿{% extends "layout.html" %}
+{% block body %}
+<link href="{{url_for('static',filename='css/about.css') }}" rel="stylesheet">
+<style type="text/css">
+    .owner_img
+    {
+
+    }
+
+</style>
+    <!-- ABOUT SECTION -->
+    <div class="section">
+        <div class="container">
+
+
+            <div class="row main-low-margin">
+                <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                    <br/> <br/>
+                    <h1>About Us</h1>
+                    <br/> 
+                    <p id="about_page">
+                        Homesecure has established the network for after sales service & support all over the distribution area. The qualified and experienced service experts provide the quickest and best service to you. Moreover Homesecure has been conducting the training for after sales service engineers through the regular training in the place of overseas partners. Headquarter of Homesecure also provide the after sales service training to the buyers all over the Chitrakoot. Homesecure also provides service with customized features and offers professional security and surveillance system solutions to meet various customers’ demands.
+                    </p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+    <div class="container">            
+        <div class="row main-low-margin ">
+            <div class="col-md-4 col-sm-4 text-center">
+                <img class="img-circle" id="owner_img" src="{{url_for('static',filename='images/owner.jpg')}}">
+                <br/> <br/>
+                <h3>Kanha Kesharwani</h3>
+                <h4>Self Employed</h4>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <h2>About Me.</h2>
+                <h3 >
+                    “If you are not willing to risk the usual, you will have to settle for the ordinary.”<b> – </b> <em> Jim Rohn</em>
+                </h3>
+            </div>
+        </div>
+        
+    </div>
+    <img id='arrow' src="{{url_for('static',filename='images/arrow.gif')}}" alt='none'/>
+
+    <div class="container">            
+        <div class="row main-low-margin ">
+            <div class="col-md-4 col-sm-4 text-center">
+                <img class="img-circle" id="owner_img" src="{{url_for('static',filename='images/own.jpg')}}">
+                <br/> <br/>
+                <h3>Name</h3>
+                <h4>Worker <br/>(As my Brother)</h4>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <h2>Specially Thanks for #####.</h2>
+                <h3 >
+                    He is a Person, Who always support and motivate for my work. At that time he is not with us. But i prey to god for his Goodness. We always Miss you a lot 😢<b> – </b> <em> Kanha Kesharwani</em>
+                </h3>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!--END ABOUT SECTION -->
+    
+{% endblock %}

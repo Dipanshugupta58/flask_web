@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block body %}
+<style type="text/css">
+  .client_images{width: 45%}
+  .client_data{margin-left: 9%; margin-top: 0px}
+#client_data_block{margin-top: 2%}
+
+ /* WelcomeSection */
+
+ #Welcome_section{
+ 	border: 0px solid; 	
+ 	background-image:  url();
+ 	 background: url('../static/images/Happy-client2.jpg') no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+    margin-bottom:0;
+    height: 300px;
+    margin-top: 87px;
+    color: black;
+</style>
+	
+<div class="container-flude bg-light" id="main">
+    <div class="container-flude" id="Welcome_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+               
+
+            </div><!-- end OF col-->
+          </div><!-- end OF row-->
+        </div><!-- End Of Container-->
+      </div><!-- ENd Of Container-flude-->
+
+
+    <div class="container-flude">
+    	<div class="container" id="client_data_block">
+    {% for item in client %} 
+    {% set img = 'images/Client_Images/' + item.img %}
+     <div class="row">
+    	   <div class="col-sm-10 client_data">    		
+              <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                  <strong class="d-inline-block mb-2 text-primary">World</strong>
+                  <h3 class="mb-0">
+                    <h2 class="text-dark">{{item.name}}</h2>
+                  </h3>
+                  <div class="mb-1 text-muted">{{item.date}}</div>
+                  <p class="card-text mb-auto">{{item.feedback}}</p>
+                  <p>{{item.location}}</p>
+                </div>
+                <img class="client-image img-fluid mx-auto client_images" src="{{url_for('static',filename=img) }}">
+              </div>
+          </div>        
+      </div>
+
+
+    {% endfor %}
+    <!--<div class="row">
+      <div class="col-sm-10 client_data">
+        <a href="{{prev}}" class="btn btn-info">Older</a>
+        <a href="{{next}}" class="btn btn-info">Next</a>
+      </div>
+    </div>-->     
+    	</div>
+    </div>
+</div>    
+{% endblock %}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <!-- GooGLe FOnts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+
+   <link href="{{url_for('static',filename='open-iconic/font/css/open-iconic.css') }}" rel="stylesheet">   
+    
+    <title>{{params['blog_name']}}</title>
+
+     
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+<!-- layout CSS -->
+    <link href="{{url_for('static',filename='css/layout.css') }}" rel="stylesheet">
+  </head>
+<body>
+
+    <!-- Navigation -->
+  <div id="menus" style="margin-bottom: 3%">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #252a37;">
+      <div class="container">        
+        <a href="/">
+        <img src=" {{url_for('static',filename='images/icons/Capture.png') }} " class="img-responsive navbar-brand brand_logo" style="height:70px; ">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto" id="collapse_menu">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">PRODUCTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/solution">SOLUTION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/our_clients">OUR CLIENTS</a>
+            </li>            
+            <li class="nav-item">
+              <a class="nav-link" href="/about">ABOUT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>  
+<!--  body Block -->
+{% block body %}
+
+{% endblock %}
+<!-- body Block -->
+
+<!-- Footer -->
+	    <!---->
+    <section id="contact" class=" section-padding wow fadeInUp delay-05s" style="background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(37, 42, 55));">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center white" style="color: black;
+  text-shadow: 2px 2px 4px orange;">
+            <h2 class="service-title pad-bt15">Keep in touch with us</h2>
+            <p class="sub-title pad-bt15"> We are always try to happy our customer's. 
+              <br/>For any Enquiry contact with us, we are always available for helping to you. <br/> </p>
+            <hr class="bottom-line white-bg">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="loction-info white" style="color: white;">
+              <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Near Head Post Office,<br>Purani Bazar <br/>  Karwi, Chitrakoot <br/> U.P. 210205 </p>
+              <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>kanhakes@gmail.com</p>
+              <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+91 7499099955 <br/> +91 7489099955</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="contact-form">
+              <form name="" class="class="contactForm"" id="" action="http://cleancity.ga/mail/homesecure_mail.php" method="POST">
+              
+                <div class="col-md-12 padding-right-zero">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control txtbox" id="name" placeholder="Your Name" required="required" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control txtbox" name="email" id="email" placeholder="Your Email" required="required" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control txtbox" name="subject"  id="subject" placeholder="Subject" required="required" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea class="form-control txtbox" name="message" rows="5" placeholder="Message" required="required"></textarea>
+                    <div class="validation"></div>
+                  </div>
+                  <input type="submit" class="btn btn-primary btn-submit" id="FeedBack_btn" name="submit" value="SEND NOW">
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+    </section>
+    </main>
+          <!-- FOOTER -->
+    
+      <footer id='footer' style="margin: 0px;" >
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2019-2020 DCOM, Inc. </p>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="{{url_for('static',filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/popper-jquery.min') }}"></script> 
+
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.scrollex.min.js') }}"></script> 
+    
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    
+ </body>
+</html>

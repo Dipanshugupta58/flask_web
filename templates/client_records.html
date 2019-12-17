@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>{{params['blog_name']}}</title>
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static',filename='css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{url_for('static',filename='css/registation.css') }}" rel="stylesheet">
+  </head>
+
+<body>
+
+<!-- For Navigation -->
+  <div id="menus" style="margin-bottom: 3%">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #252a37;">
+      <div class="container">        
+        <a href="">
+        <img src=" {{url_for('static',filename='images/icons/Capture.png') }} " class="img-responsive navbar-brand brand_logo" style="height:70px; ">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto" id="collapse_menu">            
+            <li class="nav-item">
+              <a class="nav-link btn-danger" href="/logout">Sign Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>  
+
+
+
+<div class="container bg-light">  
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1>{{params['blog_name']}}</h1>
+            <h1>DASHBOARD</h1>
+            <hr>
+      </div>
+      <div class="col-sm-2" id="Shortcut_Menus">
+        <!-- For Menu Designing -->          
+          <h3>Display Records</h3>
+          <ul>
+            <li id="/disp_feedback"><a href="/disp_feedback">feedback</a></li>
+            <li id="/disp_client"><a href="/disp_client">Client</a></li>            
+          </ul>
+
+          <h3>Insert Records</h3>
+          <ul>
+            <li id="/client_data"><a href="/client_data">Client</a></li>           
+          </ul>
+      </div>     
+<!-- For DIsplay Client record -->
+    <div class="col-sm-10" id="display_client_record">
+      <h2>Client record</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>            
+            <th scope="col">NAME</th>
+            <th scope="col">FEEDBACK</th>
+            <th scope="col">LOCATION</th>
+            <th scope="col">DATE</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+{% for item in client %}
+          <tr>            
+            <td>{{item.name}}</td>
+            <td>{{item.feedback}}</td>
+            <td>{{item.location}}</td>
+            <td>{{item.date}}</td>
+            <td><a href="/delete_client/{{item.sn}}"><button class="btn btn-warning">Delete</button></a></td>
+          </tr>
+{% endfor %}
+        </tbody>
+      </table>
+      <a class="btn btn-info float-left" href="">Previous</a>
+      <a class="btn btn-info float-right" href="">Next</a>
+    </div>
+  </div><!-- end of container-flude row-->  
+</div><!-- end of container-flude-->
+
+    <script src="{{url_for('static',filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.scrollex.min.js') }}"></script>
+    
+</body>
+</html>
